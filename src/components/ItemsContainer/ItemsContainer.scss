@@ -1,0 +1,84 @@
+@import "../../stylesheets/colors.scss";
+
+.items_container {
+  margin-top: 5%;
+  color: $whitish;
+  width: 70%;
+  margin-left: 15%;
+  p {
+    text-align: center;
+    font-size: 40px;
+  }
+  h2 {
+    text-align: center;
+  }
+  .items_collection {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .item_card {
+      margin-top: 20px;
+      display: flex;
+      overflow: hidden;
+      flex-direction: column;
+      align-items: center;
+      width: 30%;
+
+      cursor: pointer;
+      h3 {
+        text-align: center;
+      }
+      img {
+        object-fit: cover;
+        height: 300px;
+        width: 90%;
+        &:hover {
+          transform: scale(1.1);
+          transition: transform 1s;
+        }
+      }
+
+      &:hover {
+        background-color: $primary-color;
+      }
+      .item_details {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        .unavailable {
+          opacity: 0.65;
+          background-color: $hover-color;
+          outline: none;
+          cursor: context-menu;
+          &:hover {
+            pointer-events: none;
+            border-color: $primary-color;
+          }
+        }
+        button {
+          border: 1.5px solid $primary-color;
+          color: black;
+          font-size: 14px;
+          background-color: $whitish;
+          height: 40px;
+          cursor: pointer;
+          &:hover {
+            border: 1.5px solid $secondary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .items_container {
+    .items_collection {
+      .item_card {
+        width: 80%;
+      }
+    }
+  }
+}

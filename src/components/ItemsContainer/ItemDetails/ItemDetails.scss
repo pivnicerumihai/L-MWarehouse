@@ -1,0 +1,141 @@
+@import "../../../stylesheets/colors.scss";
+
+.item_details_container {
+  border: 3px solid $primary-color;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  border-bottom: none;
+  display: flex;
+  width: 70%;
+  margin-left: 15%;
+  padding: 15px;
+  text-align: center;
+  margin-top: 5%;
+  background-color: $whitish;
+  justify-content: center;
+  .left_container {
+    align-self: center;
+    img {
+      width: 60%;
+    }
+  }
+  .right_container {
+    flex-direction: column;
+    display: flex;
+
+    .item_name {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .unavailable {
+      opacity: 0.65;
+      background-color: $hover-color;
+      outline: none;
+      cursor: context-menu;
+      &:hover {
+        pointer-events: none;
+        border-color: $primary-color;
+      }
+    }
+    button {
+      margin-top: 20px;
+      width: 150px;
+      padding: 10px;
+      align-self: center;
+      border: 1.5px solid $primary-color;
+      background-color: $whitish;
+      font-size: 14px;
+      cursor: pointer;
+      &:hover {
+        border-color: $secondary-color;
+      }
+    }
+    input {
+      outline: none;
+      width: 40px;
+    }
+  }
+  .stock {
+    padding: 7px;
+  }
+}
+
+.item_description {
+  margin-left: 15%;
+  background-color: $whitish;
+  border: 3px solid $primary-color;
+  width: 70%;
+  padding: 15px;
+  text-indent: 35px;
+}
+
+.reviews_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  .new_item_review {
+    width: 30%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    input[type="text"] {
+      padding: 5px;
+      width: 600px;
+      outline: none;
+    }
+    textarea {
+      padding: 5px;
+      outline: none;
+      width: 600px;
+      height: 250px;
+      resize: none;
+    }
+    input[type="submit"] {
+      margin-left: 10px;
+      padding: 7px;
+      border: 1.5px solid $primary-color;
+      cursor: pointer;
+      outline: none;
+      font-size: 14px;
+      &:hover {
+        border-color: $secondary-color;
+      }
+    }
+  }
+
+  .item_reviews {
+    width: 50%;
+    padding: 30px;
+    text-align: center;
+
+    .no_reviews {
+      font-size: 22px;
+      color: $whitish;
+    }
+    .review {
+      border: 1.5px solid $primary-color;
+      background-color: $whitish;
+      .review_header {
+        text-align: start;
+        margin-top: 0;
+        font-size: 18px;
+        color: $whitish;
+        background-color: $primary-color;
+        padding: 3px 0px 3px 15px;
+      }
+      .review_content {
+        padding: 5px;
+        text-align: start;
+        background-color: $whitish;
+      }
+      .date_added {
+        font-size: 12px;
+        background-color: $primary-color;
+        color: $whitish;
+        margin-bottom: 0;
+        text-align: end;
+        padding: 5px;
+      }
+    }
+  }
+}

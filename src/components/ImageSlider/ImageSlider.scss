@@ -1,0 +1,46 @@
+@import "../../stylesheets/colors.scss";
+
+.slider_container {
+  width: 100%;
+  height: 600px;
+  img {
+    margin-left: 2.5%;
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .arrow_left {
+    padding: 10px;
+    position: absolute;
+    height: 580px;
+    color: $primary-color;
+    background-color: $whitish;
+  }
+  .arrow_right {
+    position: absolute;
+    height: 580px;
+    right: 0;
+    padding: 10px;
+    color: $primary-color;
+    background-color: $whitish;
+  }
+  .arrow_left:hover,
+  .arrow_right:hover {
+    cursor: pointer;
+
+    background-color: $hover-color;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .slider_container {
+    height: 300px;
+
+    .arrow_left {
+      height: 280px;
+    }
+    .arrow_right {
+      height: 280px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import "../../stylesheets/colors.scss";
+.topnav {
+  width: calc(100%-5px);
+  padding: 7px;
+  display: flex;
+  background-color: black;
+  color: $whitish;
+  justify-content: flex-end;
+
+  span {
+    &:hover {
+      cursor: pointer;
+      color: $hover-color;
+    }
+    margin-left: 15px;
+    &:last-of-type {
+      margin-right: 15%;
+    }
+  }
+
+  .my_account {
+    position: relative;
+
+    .my_account_dropdown {
+      display: flex;
+      flex-direction: column;
+
+      border: 1px solid $primary-color;
+      top: 30px;
+      text-align: center;
+      z-index: 3;
+      background-color: black;
+      width: 200px;
+      position: absolute;
+
+      button {
+        cursor: pointer;
+        font-size: 14px;
+        padding: 10px;
+        color: $whitish;
+        border: none;
+        background: none;
+        &:hover {
+          background-color: $hover-color;
+          color: black;
+        }
+      }
+    }
+  }
+  .basket_icon {
+    position: relative;
+  }
+  .items_in_basket {
+    background-color: $whitish;
+    color: black;
+    padding: 0px 5px 0px 5px;
+    font-weight: bolder;
+    border-radius: 12px;
+    &:hover {
+      cursor: context-menu;
+      color: black;
+    }
+  }
+}

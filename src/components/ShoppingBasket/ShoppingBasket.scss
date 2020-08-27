@@ -1,0 +1,88 @@
+@import "../../stylesheets/colors.scss";
+
+.shopping_basket {
+  margin-left: 20%;
+  margin-top: 8%;
+  height: 80vh;
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  background-color: $whitish;
+  border-radius: 20px;
+  border: 3px solid $primary-color;
+  overflow-y: auto;
+  position: relative;
+  padding-bottom: 80px;
+  .basket_item {
+    border-bottom: 1px solid $primary-color;
+    padding: 20px;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .item_name {
+      font-size: 18px;
+      font-weight: bold;
+      color: $secondary-color;
+    }
+    .quantity {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      & > * {
+        padding: 5px;
+        cursor: pointer;
+        &:hover {
+          color: $hover-color;
+        }
+      }
+    }
+    img {
+      width: 150px;
+    }
+    .delete_icon {
+      cursor: pointer;
+      &:hover {
+        color: red;
+      }
+    }
+  }
+  .order_details {
+    background-color: $whitish;
+    position: fixed;
+    bottom: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size: 20px;
+    color: $whitish;
+    width: 60vw;
+    border-top: 3px solid $primary-color;
+    text-align: center;
+    .price {
+      text-align: center;
+      color: $secondary-color;
+    }
+    button {
+      border: 1.5px solid $secondary-color;
+      border-radius: 5px;
+      height: 40px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      &:hover {
+        border-color: $primary-color;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .shopping_basket {
+    width: 90vw;
+    margin-left: 5%;
+    .order_details {
+      width: 90vw;
+    }
+  }
+}

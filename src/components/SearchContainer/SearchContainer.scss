@@ -1,0 +1,44 @@
+@import "../../stylesheets/colors.scss";
+
+.search_container {
+  z-index: 7;
+  background-color: $whitish;
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  border: 2px solid $secondary-color;
+  cursor: pointer;
+  overflow-y: auto;
+  .item_card {
+    border-bottom: 1px solid $secondary-color;
+    display: flex;
+    padding: 15px;
+    justify-content: space-evenly;
+    &:hover {
+      background-color: $hover-color;
+    }
+    img {
+      object-fit: cover;
+      width: 50px;
+    }
+    h3 {
+      font-size: 16px;
+      text-align: center;
+      color: black;
+      &:after {
+        display: none;
+      }
+    }
+
+    button {
+      display: none;
+    }
+    .stock {
+      display: none;
+    }
+  }
+  .no_results {
+    text-align: center;
+    color: black;
+  }
+}

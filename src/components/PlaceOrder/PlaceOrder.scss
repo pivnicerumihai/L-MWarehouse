@@ -1,0 +1,76 @@
+@import "../../stylesheets/colors.scss";
+.place_order {
+  display: flex;
+  flex-direction: column;
+  .place_order_form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    color: $whitish;
+    align-items: center;
+    h2 {
+      text-align: center;
+    }
+    input {
+      padding: 5px;
+      border-radius: 1px;
+      outline: none;
+    }
+    .name_inputs,
+    .contact_inputs {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      & > * {
+        padding: 15px;
+      }
+    }
+
+    .single_input {
+      width: 400px;
+    }
+
+    label {
+      font-size: 18px;
+      padding: 5px;
+    }
+    input[type="submit"] {
+      border: 1.5px solid $primary-color;
+      padding: 10px;
+      font-size: 15px;
+      cursor: pointer;
+      &:hover {
+        border-color: $hover-color;
+      }
+    }
+  }
+
+  h3 {
+    text-align: center;
+    color: red;
+  }
+  .order_details {
+    margin-left: 5%;
+    padding-bottom: 50px;
+    h2 {
+      color: $whitish;
+    }
+    table {
+      border-collapse: collapse;
+
+      color: $whitish;
+      width: 80%;
+      tr {
+        border: 1px solid $primary-color;
+      }
+      td {
+        padding: 5px;
+      }
+    }
+  }
+  input[type="radio"] {
+    font-size: 18px;
+    color: $whitish;
+  }
+}

@@ -1,0 +1,84 @@
+@import "../../stylesheets/colors.scss";
+
+.shopping_basket_preview {
+  position: absolute;
+  z-index: 3;
+  background-color: $whitish;
+  top: 30px;
+  width: 400px;
+
+  right: 0px;
+  border: 1px solid $secondary-color;
+  border-radius: 5px;
+  .basket_item {
+    height: 100px;
+    justify-content: space-around;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $secondary-color;
+    img {
+      height: 50px;
+      width: 50px;
+    }
+    .item_name {
+      text-align: center;
+      padding: 25px;
+      color: black;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: $hover-color;
+    }
+    .quantity {
+      padding: 15px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      color: black;
+      & > * {
+        padding: 10px;
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+    .delete_icon {
+      color: black;
+      &:hover {
+        color: red;
+      }
+    }
+
+    .price_details_item {
+      color: $primary-color;
+      .item_price {
+        display: none;
+      }
+      .total_items_price {
+        display: none;
+      }
+    }
+  }
+  .price {
+    text-align: center;
+    color: $secondary-color;
+  }
+  .basket_buttons {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+
+    & > * {
+      border: 1px solid $primary-color;
+      font-size: 14px;
+      border-radius: 5px;
+      margin: 5px;
+      padding: 10px;
+      &:hover {
+        border-color: $secondary-color;
+        cursor: pointer;
+      }
+    }
+  }
+}
